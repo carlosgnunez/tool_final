@@ -16,6 +16,8 @@ body{
     margin: auto;
 }
 
+/* Header */
+
 header{
     padding: 10px 0;
 }
@@ -80,14 +82,17 @@ nav{
 
 #check:checked ~ .nav-menu{
     height: 100vh;
+    z-index: 10;
 }
 
 #check:checked ~ .nav-menu li{
     display: block;
 }
 
+/* Contenido Principal */
+
 main{
-    min-height: calc(100vh - 160px - 203px);
+    min-height: calc(100vh - 120px - 203px);
 }
 
 .main-content{
@@ -137,6 +142,195 @@ main{
     color: #000;
 }
 
+/* Integrantes - Contenido */
+
+.container-img{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+    gap: 10px;
+}
+
+.container-img figure{
+    position: relative;
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.container-img figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.container-img figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 103, 123, .6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.container-img figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.container-img figure:hover > .capa h3{
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
+
+.container-img figure .capa h3{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.container-img figure .capa p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+.container-img figure .capa a button{
+    background: rgba(0, 0, 0, .5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+/* Galeria */
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-item{
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover{
+    filter: opacity(0.5);
+    transform: scale(1.04);
+}
+
+.gallery-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-auto-rows: 150px;
+    padding: 20px;
+    gap: 10px;
+}
+
+/* Contacto */
+
+.container-contact{
+    width: 90%;
+    margin: 0 auto 30px;
+}
+
+.form-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-contact form{
+    background: #2e2e2e;
+    padding: 2.5rem 0.625rem;
+    border-radius: 0.25rem;
+    margin: 0 auto;
+}
+
+.container-contact label{
+    color: #fff;
+    display: flex;
+    font-size: 1.125rem;
+    margin: 10px 0;
+}
+
+.container-contact input, .container-contact select, .container-contact textarea{
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.title-sub{
+    text-align: left;
+    font-size: 1.125rem;
+    margin: 1rem 0rem;
+    color: #fff;
+}
+
+.radio{
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+}
+
+.form-input{
+    display: block;
+    width: 100%;
+    height: 2rem;
+    padding: 0.375rem 0.75rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.text-area{
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: none;
+  }
+
+  .btns{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .button{
+    display: inline-flex;
+    justify-content: center;
+    width: 45%;
+    background: #141414;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: none;
+    transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .button:hover{
+      background: #fff;
+      color: #000;
+  }
+
+/* Footer */
+
 .footer{
     background-image: url(../assets/img/tool-navbar.jpg);
     background-position: center;
@@ -179,6 +373,8 @@ main{
     padding: 15px 10px;
 }
 
+/* Media Query */
+
 @media screen and (min-width: 768px) {
     .bar-btn{
         display: none;
@@ -197,7 +393,7 @@ main{
     .nav-menu li{
         display: inline-block;
         line-height: 100px;
-        margin: 0 20px;
+        margin: 0 10px;
         transition: none;
     }
 
@@ -206,7 +402,36 @@ main{
     }
 
     main{
-        min-height: calc(100vh - 160px - 167px);
+        min-height: calc(100vh - 120px - 167px);
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .container-dis{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container-dis figure{
+        margin: 0 20px;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .gallery-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        grid-auto-rows: 150px;
+        padding: 20px;
+        gap: 10px;
     }
 
     .footer .grupo-1{

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En esta página vas a encontrar toda la información sobre la banda estadounidense de metal progresivo TOOL. Sus integrantes, su discografía y sus mejores imágenes.">
+    <meta name="keywords" content="TOOL, ROCK,  METAL, MUSICA, MAYNARD, JONES, CHANCELLOR, CAREY">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>TOOL</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html">
+                    <img src="../assets/img/tool-logo1.png" class="logo" alt="Logo">
+                </a>
+                <input type="checkbox" name="check" id="check">
+                <label for="check" class="bar-btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="integrantes.html">Integrantes</a></li>
+                    <li><a href="discografia.html">Discografía</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a class="active" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container-contact">
+            <form action="#">
+                <div class="form-container">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" placeholder="Ingresa tu nombre." class="form-input"><br>
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" name="lastname" placeholder="Ingresa tu apellido." class="form-input"><br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Ingresa tu mail." class="form-input"><br>
+                    <label for="age">Edad:</label>
+                    <input type="number" name="age" id="age" placeholder="Ingresa tu edad." class="form-input"><br>
+                    <p class="title-sub">Conoces a la banda TOOL?</p>
+                    <label for=""><input type="radio" name="radio" id="1" class="radio">Si</label>
+                    <label for=""><input type="radio" name="radio" id="0" class="radio">No</label>
+                    <p class="title-sub">Disco Preferido:</p>
+                    <select name="albums" id="albums" class="form-input">
+                        <option disabled selected value>Seleccione su disco preferido de TOOL</option>
+                        <option value="1">Undertow</option>
+                        <option value="2">Ænima</option>
+                        <option value="3">Lateralus</option>
+                        <option value="4">10,000 Days</option>
+                        <option value="5">Fear Inoculum</option>
+                    </select>
+                    <p class="title-sub">Dejanos tu mensaje:</p>
+                    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Escribi tu comentario aca..." class="text-area"></textarea><br>
+                    <label><input type="checkbox" name="aceptar" id="aceptar" value="1">Quiero recibir mas info sobre TOOL</label><br><br>
+                    <div class="btns">
+                        <input type="reset" value="Limpiar Formulario" class="button">
+                        <input type="submit" value="Enviar Formulario" class="button">
+                    </div>
+                </div>
+           </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="grupo-1">
+                <div class="box">
+                    <a href="../index.html">
+                        <img src="../assets/img/tool-logo1.png" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <div class="box">
+                    <h2>REDES SOCIALES</h2>
+                    <div class="red-social">
+                        <a href="https://www.facebook.com/ToolMusic/" class="fab fa-facebook-square"></a>
+                        <a href="https://twitter.com/tool/" class="fab fa-twitter-square"></a>
+                        <a href="https://www.instagram.com/toolmusic/" class="fab fa-instagram-square"></a>
+                        <a href="https://www.youtube.com/channel/UC1wUo-29zS7m_Jp-U_xYcFQ" class="fab fa-youtube"></a>
+                        <a href="https://open.spotify.com/artist/2yEwvVSSSUkcLeSTNyHKh8" class="fab fa-spotify"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <h3>&copy; 2022 - Carlos Nuñez</h3>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
